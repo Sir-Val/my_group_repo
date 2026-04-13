@@ -15,8 +15,8 @@
       --court-color:      #16213e;   /* inner play area */
       --net-color:        #0f3460;   /* center dashed line */
       --ball-color:       #e94560;   /* ball fill */
-      --paddle-p1-color:  #00b4d8;   /* left paddle  (Player 1) */
-      --paddle-p2-color:  #90e0ef;   /* right paddle (Player 2) */
+      --paddle-p1-color:  #ff006a;   /* left paddle  (Player 1) */
+      --paddle-p2-color:  #00f7ff;   /* right paddle (Player 2) */
       --score-color:      #ffffff;   /* score & UI text */
       --ui-font:          'Courier New', Courier, monospace;
     }
@@ -353,8 +353,8 @@
       // ── Player labels (subtle)
       ctx.font      = '12px ' + cssVar('--ui-font');
       ctx.globalAlpha = 0.4;
-      ctx.fillText('P1', canvas.width / 4,     80);
-      ctx.fillText('P2', canvas.width * 3 / 4, 80);
+      ctx.fillText('Gray', canvas.width / 4,     80);
+      ctx.fillText('Sir Val', canvas.width * 3 / 4, 80);
       ctx.globalAlpha = 1;
  
       // ── Paddles
@@ -429,7 +429,7 @@
       // Draw one final frame so the last score is visible
       draw();
  
-      const label = winner === 'p1' ? 'PLAYER 1' : 'PLAYER 2';
+      const label = winner === 'p1' ? 'Gray' : 'Sir Val';
       message.textContent = `🏆 ${label} WINS!  Press SPACE to play again.`;
     }
  
